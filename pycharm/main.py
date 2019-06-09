@@ -20,7 +20,7 @@ SERVER_LOGIC_ERROR = b"302 LOGIC ERROR\a\b"
 CLIENT_RECHARGING = b"RECHARGING"
 
 HOST = '0.0.0.0'
-PORT = 14785
+PORT = 14781
 
 class ServerService:
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -265,4 +265,3 @@ class ClientService:
         self.conn.close()
 
 ServerService().waitForRequest()
-
