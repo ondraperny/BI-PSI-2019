@@ -1,17 +1,15 @@
-# BI-PSI-2019
+# Python 3 server.
 
-Python server that control simple robot movements(turn left/right, go straight) in 2D space. 
-Robot must be navigated to specific set of coordinates and there seek special coordinate with "treasure".
-Server use threading. Therefore can operate multiple robots simultaneously.
+Python server controlling simple robot movements (turning left/right, going straight) in a 2D space. The objective is to navigate the robot to a specific set of coordinates and locate a special coordinate with a "treasure". The server utilizes threading, allowing for the simultaneous operation of multiple robots.
 
 ---
-For testing is provided compiled file `psi-tester-2018-t1-v3_x64`. First start server in background and then tester
-with parameters `PORT` (14781) and `HOST` (for testing purposes used localhost). Series of 30 tests will be executed.
+To perform testing, there is provided tester `psi-tester-2018-t1-v3_x64` simulating the robot clients prompting server for instructions.
 
-    python3 pycharm/main.py &
-    ./psi-tester-2018-t1-v3_x64 14781 0.0.0.0
-    
-
-	
-
-
+Follow these steps:
+1. Start the server in the background.
+2. Run the tester with the following parameters: `PORT` (set to 14781) and `HOST` (for testing purposes, use "localhost").
+```
+    python3 pycharm/main.py & ./psi-tester-2018-t1-v3_x64 14781 0.0.0.0
+```
+ 
+The tester will execute a series of 30 tests to check the server's functionality.
